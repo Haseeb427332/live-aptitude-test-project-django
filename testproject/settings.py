@@ -25,7 +25,7 @@ SECRET_KEY = 'l#0c$!v_p3olb9(d-=7w_*y@oy5up7xsxh#m8u&@5_=o@=9vu+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','liveaptitudetest.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','liveaptitude.herokuapp.com']
 
 
 # Application definition
