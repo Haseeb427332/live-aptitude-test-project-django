@@ -1,0 +1,376 @@
+.contain{
+    padding: 100px;
+    width: 600;
+    border:1px;
+    border-color: blueviolet;
+   
+}
+.avatar{
+    border-radius:50%;
+    width:20%;
+}
+.hrstyle{
+    border: 1px solid;
+    width: 300px;
+}
+.background-graident{
+    background: linear-gradient(45deg,darkslategrey, transparent);
+}
+.bg{
+    background-color: #C2CAD0;
+}
+.iconDetails {
+    margin-left:2%;
+   float:left; 
+   height:40px;
+   width:40px; 
+} 
+   
+.container2 {
+    width:100%;
+    height:auto;
+    padding:1%;
+}
+.aboutme{
+    font-size: 30px;
+    font-style: italic;
+    color: whitesmoke;
+}
+body{
+    background-image: url('/static/images/bg-image.jpg');
+    font-family: 'Times New Roman', Times, serif;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.jumbo{
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    background-color: white;
+}
+.alert{
+    margin: 40;
+}
+.h4style{
+    margin: 0px;
+    color: whitesmoke;
+}
+.textstyle{
+    margin-top: 5px;
+}
+.no-border{
+    border: 0px;
+}
+.bgqureies{
+    background: linear-gradient(45deg,dimgrey, transparent);
+}
+.bghtml{
+    background: chocolate;
+}
+.bgcss{
+    background: steelblue;
+}
+.bgjava{
+    background: gold;
+}
+.bgpython{
+    background: royalblue;
+}
+.bgdjango{
+    background: darkslategray;
+}
+
+.closebtn{
+    margin-left: 15px;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.top_40{
+    margin-top: 40px;
+}
+
+.heading{
+    background-color: cadetblue;
+    color:white;
+}
+
+.jumbo-form{
+    background-color:lavender;
+}
+.options{
+    padding: 5;
+}
+
+.tdata{
+    width: 60%;
+}
+
+.hide{
+    visibility:hidden
+}
+
+.correct{
+    color:green;
+}
+.comments{
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+.size{
+    font-size: 16px;
+}
+.bg_white{
+    background-color: white;
+}
+
+table{
+    font-size: medium;
+}
+
+textarea.form-control {
+    height: 20%;
+}
+
+.display{
+    display: none;
+}
+
+.round{
+    border-radius: 100px;
+}
+
+.btn{
+    border-radius: 50px;
+}
+
+.test{
+    background: #C5CBE3;
+    margin-left: 50;
+    margin-right: 50;
+}
+
+.wide{
+    width: 30%;
+}
+
+.wide_50{
+    width: 50%;
+}
+.style11 {
+    width: auto;
+    background: teal;
+    font-size: 40;
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+fieldset{
+    border: 1px solid;
+}
+
+.instruction{
+    background: #90ee90;
+    color: darkcyan;
+    border: 1px solid darkgreen;
+    padding: 50;
+    border-radius: 20px;
+}
+
+.opt_effect{
+    background: white;
+    border: 1px solid;
+    padding:5px;
+}
+
+.font{
+    font-size: large;
+}
+
+.color{
+    background-color:whitesmoke;
+}
+
+article {
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    overflow: hidden;
+    box-shadow: 3px 3px 10px #ccc;
+    background-color: white;
+}
+
+article #timer{
+    padding: 5px;
+    color: crimson;
+    background-color: aliceblue;
+    border-radius: 2px;
+}
+
+.red{
+    color: red;
+}
+
+.floats{
+    float: right;
+}
+.floatsleft{
+    float: left;
+}
+
+.form-options{
+        display: block;
+        width: 100%;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.test-options{
+    display: block;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.table-resp {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.imgwidth{
+    width: 50;
+}
+
+.margin15{
+    margin:15px;
+}
+.marginbtm{
+    margin-bottom: 30;
+}
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:auto;
+    }
+    .imgwidth{
+        width:60;
+    }
+    .avatar{
+        width:40% ;
+    }
+    .add{
+        text-align: center;
+    }
+    .top10{
+        margin-top: 10%;
+    }
+    .navbar{
+        min-width: auto;
+    }
+    .margin{
+        margin-bottom: 100;
+    }
+    .style11{
+        margin: 0;
+    }
+    .wide_50{
+        width: 75%;
+    }
+    .test{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .floats{
+        float:none;
+        text-align: center;
+    }
+    .floatsleft{
+        float: none;
+        text-align: center;
+    }
+    .form-options{
+        display: block;
+        width: 100%;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+
+    .contain{
+    margin-top:20%;
+    }
+    .table-resp {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+    .test-options{
+        display: block;
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+
+    .tdwid{
+        min-width: 100;
+    }
+    .tdwid50{
+        min-width:400;
+    }
+    .fixedsbottom {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .fixedstop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+}

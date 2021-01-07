@@ -1,0 +1,117 @@
+<html>
+  {% load static %}
+    <html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script src="/static/feedback/js/main.js"></script>
+        <link rel="stylesheet" href="{% static '/css/main.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> 
+          Live Aptitude 
+      </title> 
+        
+      <!-- add icon link -->
+      <link rel = "icon" href =  
+"https://image.shutterstock.com/image-vector/quiz-icon-logo-260nw-1298743501.jpg" 
+      type = "image/x-icon"> 
+    </head>
+
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed">
+        <a class="navbar-brand" href="{% url 'userlogin' %}"><img src="https://image.shutterstock.com/image-vector/quiz-icon-logo-260nw-1298743501.jpg" class="imgwidth" alt="Home"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'adminpanel' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'createtest' %}">CreateTest<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'queries' %}">Queries<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <ul class="navbar-nav float-right text-red ">
+            <li class="nav-item">
+              <a class=" btn btn-outline-danger" href="{% url 'logout' %}">Logout <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+           <div class="container top_40">
+             <div class="jumbotron jumbo-form bg_white margin">
+               <h4 class="heading text-center">STEP 1</h4>
+               <hr>
+               <form method="POST" >
+                 {% csrf_token %}
+                 <label>Question</label><input type="text" class="form-control" name="questions" placeholder="Enter Question here" required autofocus><br>
+                 <hr>
+                 <div class="row">
+                   <div class="col">
+                    <input type="text" class="form-group options  test-options" name="opt1" id="opt1" placeholder="Option 1" required autofocus onkeyup="return opt_value()">
+                   </div>
+                   <div class="col">
+                    <input type="text" class="form-group options  test-options" name="opt2" id="opt2" placeholder="Option 2" required autofocus onkeyup="return opt_value()">
+                   </div>
+                  <div class="col hide">
+                    <input type="text" class="form-group options test-options" name="opt3" id="opt3" placeholder="Option 3"  autofocus onkeyup="return opt_value()">
+                  </div>
+                  <div class="col hide">
+                    <input type="text" class="form-group options  test-options" name="opt4" id="opt4" placeholder="Option 4" autofocus onkeyup="return opt_value()">
+                  </div>
+                  <div class="col ">
+                    <a class="btn btn-outline-primary " role="button" id="add" onclick="add()">Add Options</a>
+                   </div>
+                 </div>
+                 <hr>
+                 <div class="row hide" id="hidden" >
+                   <div class="col">
+                    <select class =" options test-options" name="correctans" required autofocus>
+                      <option value="" selected disabled>-- Choose Correct Answer --</option>    
+                      <option id="opt1_val"></option>
+                      <option id="opt2_val"></option>
+                      <option id="opt3_val"></option>
+                      <option id="opt4_val"></option> 
+                  </select>
+                   </div><br>
+                   <div class="col top10">
+                    <select class ="options test-options" id="Correct" name="subjects" required autofocus>
+                      <option value="" selected disabled>-- Choose Category --</option>    
+                      <option value="Technical">Technical</option>
+                      <option value="English">English</option>
+                      <option value="Logical Reasoning">Logical Reasoning</option>
+                      <option value="Maths">Maths</option>
+                      <option value="Others">Others</option> 
+                  </select>
+                   </div>
+                 </div>
+                 <br>
+                 <div class="text-center form-group floatsleft">
+                  <input type="reset" class="btn btn-danger" onclick="refresh()" class="form-control" value="Cancel">
+                  <input type="submit" class="btn btn-primary" class="form-control" value="Save and another">
+                  <input type="submit" class="btn btn-primary" class="form-control" value="Save">
+                 </div>
+                 <div class="text-center form-group floats">
+                   <a href="{% url 'correctans' %}" class="btn btn-success" onclick="save_alert()">Next Step</a>
+                 </div>
+               </form>
+             </div>
+           </div>
+           <footer class="bg-light text-center text-lg-start">
+            <!-- Copyright -->
+            <div class="text-right p-3">
+              © 2020 Copyright:
+              <a class="text-dark" href="{% url 'about' %}">By Haseeb Pote</a>
+            </div>
+            <!-- Copyright -->
+          </footer>       
+    </body>
+</html>
